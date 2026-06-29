@@ -116,6 +116,14 @@ export default function RootLayout({
             fbq('init', '988486043370617');
             fbq('track', 'PageView');
           `}
+        </Script><Script id="meta-lead-event" strategy="afterInteractive">
+          {`
+            document.addEventListener('submit', function() {
+              if (typeof window.fbq !== 'undefined') {
+                fbq('track', 'Lead');
+              }
+            });
+          `}
         </Script>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
